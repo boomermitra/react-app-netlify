@@ -25,7 +25,7 @@ const AxiosApi = () => {
       .catch(function (error) {
         console.error(error);
       });
-  }, []);
+  });
 
   if (data) console.log(data);
 
@@ -57,7 +57,7 @@ const AxiosApi = () => {
                     <b>Gener: </b> {items.genre}
                     <br />
                   </Card.Text>
-                  <a href={items.game_url} target="_blank">
+                  <a href={items.game_url} target="_blank" rel="noreferrer">
                     <Button variant="success">More Info</Button>
                   </a>
                 </Card.Body>
