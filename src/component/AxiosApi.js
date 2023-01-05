@@ -7,16 +7,16 @@ import { Button, Card } from "react-bootstrap";
 const AxiosApi = () => {
   const [data, setData] = useState(null);
 
-  const options = {
-    method: "GET",
-    url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
-    headers: {
-      "X-RapidAPI-Key": "4baf334e09msh61f8fad670a4ed1p186bc3jsn02e67035fc8a",
-      "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
-    },
-  };
-
   useEffect(() => {
+    const options = {
+      method: "GET",
+      url: "https://free-to-play-games-database.p.rapidapi.com/api/games",
+      headers: {
+        "X-RapidAPI-Key": "4baf334e09msh61f8fad670a4ed1p186bc3jsn02e67035fc8a",
+        "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
+      },
+    };
+
     axios
       .request(options)
       .then(function (response) {
