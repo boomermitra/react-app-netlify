@@ -25,7 +25,7 @@ const AxiosApi = () => {
       .catch(function (error) {
         console.error(error);
       });
-  });
+  }, []);
 
   if (data) console.log(data);
 
